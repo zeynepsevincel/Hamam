@@ -1,0 +1,1 @@
+This is the code of the little sidebar thing that I'm working on for a website.
