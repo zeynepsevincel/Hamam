@@ -157,24 +157,28 @@ color: gray;
   }
 }
 .modal-wrapper {
-  background: rgba(0, 0, 0, 0.508);
+  background: rgba(0, 0, 0, 1);
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   display: none;
+  opacity: 1;
+  background-color: white;
+  visibility: visible;
 }
 .modal {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: left;
-  max-width: 2000px;
+  max-width: 1400px;
   width: 100%;
   background: #f1f1f1;
-  padding: 0px;
   /*margin: 35vh auto; */
   border-radius: 5px;
   position: center;
+  opacity: 1;
+  visibility: visible;
 }
 .modal a {
   text-decoration: none;
@@ -183,13 +187,14 @@ color: gray;
   padding: 5px 10px;
   border-radius: 5px;
   margin: 10px;
+  opacity: 1;
 }
 .modal-close {
   color: black;
-  border: 1px solid black;
+  border: 0px solid black;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 25px;
+  right: 1px;
   cursor: pointer;
   width: 20px;
   border-radius: 5px;
@@ -204,11 +209,10 @@ button {
 }
 
 
+
   </style>
   <body>
-    <!-- welcome , lets make a modal -->
-    <!-- this button will toggle modal visiblity -->
-    <button>Click Me</button>
+    <button>Click for options</button>
 
     <div class="modal-wrapper">
       <div class="modal">
@@ -322,12 +326,6 @@ let btn = document.querySelector("button");
 let close_btn = document.querySelector(".modal-close");
 
 btn.addEventListener("click", display);
-
-//  display the modal after 3 second of page load
-
-setTimeout(() => {
-  display();
-}, 1000);
 
 function display() {
   modal.style.display = "block";
